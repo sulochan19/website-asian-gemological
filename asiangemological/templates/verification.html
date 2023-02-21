@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section class="s_verification_section">
+        <div class="container">
+            {% if stone_details %}
+        {% for stone_detail in stone_details %}
+        <h2 class="heading-2">Verification Report</h2>
+        <div class="report-section">
+            <img src="../static/img/228347852_4170060793112164_6222249673722444893_n-removebg-preview.png">
+            <div>
+                <p>Report no: {{ stone_detail.verification_number }}</p>
+                <p>Date:</p>
+                <p>Item Described:</p>
+                <p>Shape/Cut:</p>
+                <p>Weight:</p>
+                <p>Dimensions:</p>
+                <p>Colour:</p>
+                <p>Identified as:</p>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <h2 class="heading-2">Sorry record could not be found.</h2>
+        {% endif %}
+        </div>
+    </section>
+{% endblock %}

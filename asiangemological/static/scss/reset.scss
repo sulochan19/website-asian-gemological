@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter';
+}
+a {
+    color: #797E94;
+    text-decoration: none;
+
+    &:hover {
+        color: #797E94;
+        text-decoration: none;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+}

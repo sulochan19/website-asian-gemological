@@ -1,0 +1,415 @@
+.primary-btn {
+    background: white;
+    border-radius: 8px;
+    width: fit-content;
+    padding: 15px 34px;
+    color: #251B21;
+
+    &:hover {
+        background: white;
+        color: #251B21;
+    }
+}
+
+//scss for hero section starts
+.s_hero_section {
+    padding: 80px 0 100px 0;
+    background: url("../img/submit-your-gem-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .hero-section {
+        display: flex;
+        flex-direction: row;
+        gap: 200px;
+
+        .hero-text-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h1 {
+                font-style: normal;
+                font-weight: 900;
+                font-size: 80px;
+                line-height: 80px;
+                letter-spacing: 0.01em;
+                color: white;
+            }
+        }
+
+        .hero-text__description {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 160%;
+            color: white;
+            margin: 24px 0 64px 0;
+        }
+
+        .hero-text__link {
+            padding: 16px 64px;
+            color: #251B21;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+//scss for hero section ends
+
+.s_navbar_section {
+    background-color: white;
+}
+
+/* css for service section */
+.s_services_section {
+    background: white;
+    padding: 100px 0 30px 0;
+
+    .services-section-heading {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 61px;
+        text-align: center;
+        letter-spacing: 0.01em;
+        text-transform: capitalize;
+        margin-bottom: 52px;
+        color: #251B21;
+    }
+
+    .service-section-cards {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        margin: 0 150px;
+
+        .service-card {
+            flex-basis: 100%;
+            background: #FFFFFF;
+            padding: 32px;
+            box-shadow: 0px 8px 16px rgba(98, 120, 227, 0.1);
+            border-radius: 8px;
+
+            &__logo {
+                margin-bottom: 18px;
+            }
+
+            &__title {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: 0.01em;
+                text-transform: capitalize;
+                margin-bottom: 14px;
+            }
+
+            &__description {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 160%;
+                color: #797E94;
+                margin-bottom: 43px;
+            }
+
+            &__link {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                color: #1C1F32;
+            }
+
+        }
+    }
+}
+
+/* css for service section ends */
+
+/* css for image-text section */
+.s_image_text_section {
+    background: white;
+    padding: 100px 0 30px 0;
+
+    .image-text {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .text-content {
+        margin: 0 150px 0 0;
+        display: flex;
+        flex-direction: column;
+
+        &__heading {
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 61px;
+            letter-spacing: 0.01em;
+            text-transform: capitalize;
+            color: #251B21;
+            text-align: left;
+            margin-bottom: 42px;
+        }
+
+        &__description {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 160%;
+            color: #797E94;
+            margin-bottom: 20px;
+        }
+
+        &__link {
+            margin-top: 22px;
+            color: white;
+        }
+    }
+}
+
+/* css for image-text section ends*/
+
+/* css for contact section */
+.s_contact_section {
+    background: white;
+    padding: 100px 0 50px 0;
+
+    .contact-section {
+        display: flex;
+        flex-direction: row;
+        gap: 150px;
+        margin: 0 150px;
+    }
+
+    .contact-section-text {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+
+        &__detail {
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+        }
+    }
+
+    .contact-section-heading {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 61px;
+        letter-spacing: 0.01em;
+        text-transform: capitalize;
+        text-align: left;
+        margin-bottom: 52px;
+        color: #251B21;
+    }
+}
+
+/* css for contact section ends*/
+
+/* css for footer */
+footer {
+    padding: 50px 0;
+    background: #251B21;
+
+    .footer-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: white;
+        gap: 60px;
+        padding-bottom: 61px;
+        border-bottom: 1px solid #CED1E433;
+    }
+
+    .single-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: -webkit-fill-available;
+
+        &__heading {
+            font-style: normal;
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 24px;
+            color: #FFFFFF;
+        }
+
+        &__description {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 160%;
+            color: #797E94;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__links {
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: #CED1E4;
+
+            a {
+                color: #797E94;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+/* css for verification page */
+.s_verification_section {
+    padding-top: 100px;
+
+    h2 {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 61px;
+        text-align: center;
+        letter-spacing: 0.01em;
+        text-transform: capitalize;
+        margin-bottom: 52px;
+        color: #251B21;
+    }
+
+    .report-section {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+}
+
+/* css for verification page ends */
+@media only screen and (max-width: 600px) {
+
+    .s_services_section,
+    .s_review_section,
+    .s_factilty_section,
+    .s_image_text_section,
+    .s_contact_section,
+    footer {
+        padding: 3.2rem 2.4rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .service-section-cards {
+        flex-direction: column;
+        gap: 32px;
+        margin: 0;
+    }
+
+    .review-section-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin: 0;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .facility-images {
+        flex-direction: column;
+    }
+
+    .image-text {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .text-content {
+        margin: 0;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        margin: 0;
+        gap: 30px;
+    }
+
+    .footer-section {
+        flex-direction: column;
+    }
+
+    .report-section {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .s_services_section,
+    .s_review_section,
+    .s_factilty_section,
+    .s_image_text_section,
+    .s_contact_section,
+    footer {
+        padding: 3.2rem 2.4rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .service-section-cards {
+        flex-direction: column;
+        gap: 32px;
+        margin: 0;
+    }
+
+    .review-section-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin: 0;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .facility-images {
+        flex-direction: column;
+    }
+
+    .image-text {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .text-content {
+        margin: 0;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        margin: 0;
+        gap: 30px;
+    }
+
+    .footer-section {
+        flex-direction: column;
+    }
+
+    .report-section {
+        flex-direction: column;
+    }
+}

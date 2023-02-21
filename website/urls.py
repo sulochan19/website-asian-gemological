@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from asiangemological.views import index,verification
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',index,name="homepage"),
+    path('verification',verification,name="verification")
 ]
