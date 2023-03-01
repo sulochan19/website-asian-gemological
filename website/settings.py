@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-o8jdc9n!y6-vk)!j6mft6fc#^#73%the5%tujm!ul4z4j3#4r1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['marvelous-arithmetic-5a3c12.netlify.app']
 
 
 # Application definition
