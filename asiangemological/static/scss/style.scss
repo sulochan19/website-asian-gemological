@@ -57,6 +57,7 @@
         }
     }
 }
+
 //scss for hero section ends
 
 .s_navbar_section {
@@ -275,19 +276,59 @@ footer {
 
     h2 {
         font-weight: 700;
-        font-size: 50px;
+        font-size: 22px;
         line-height: 61px;
         text-align: center;
         letter-spacing: 0.01em;
         text-transform: capitalize;
-        margin-bottom: 52px;
+        margin-bottom: 30px;
         color: #251B21;
     }
 
     .report-section {
         display: flex;
-        flex-direction: row;
-        gap: 30px;
+        flex-direction: column;
+        background: #251B21;
+        margin-bottom: 50px;
+        padding: 50px;
+        border-radius: 60px;
+
+        h3{
+            font-weight: 500;
+        font-size: 22px;
+        line-height: 61px;
+        text-align: center;
+        letter-spacing: 0.01em;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+        color: white;
+        }
+
+        .report-details {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            justify-content: space-evenly;
+         
+
+            img {
+                height: 300px;
+            }
+
+            .mid-section {
+                display: flex;
+                gap: 50px;
+            }
+
+            p {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 160%;
+                color: white;
+            }
+
+        }
     }
 }
 

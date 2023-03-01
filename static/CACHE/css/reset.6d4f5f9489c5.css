@@ -1,0 +1,24 @@
+/* line 1, asiangemological/static/scss/reset.scss */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0; }
+
+/* line 8, asiangemological/static/scss/reset.scss */
+body {
+  font-family: 'Inter'; }
+
+/* line 11, asiangemological/static/scss/reset.scss */
+a {
+  color: #797E94;
+  text-decoration: none; }
+  /* line 15, asiangemological/static/scss/reset.scss */
+  a:hover {
+    color: #797E94;
+    text-decoration: none; }
+
+/* line 21, asiangemological/static/scss/reset.scss */
+.container {
+  margin: 0 auto;
+  max-width: 1140px; }

@@ -1,27 +1,78 @@
 {% extends 'base.html' %}
 {% block content %}
-    <section class="s_verification_section">
-        <div class="container">
-            {% if stone_details %}
+<section class="s_verification_section">
+    <div class="container">
+        {% if stone_details %}
         {% for stone_detail in stone_details %}
-        <h2 class="heading-2">Verification Report</h2>
         <div class="report-section">
-            <img src="../static/img/228347852_4170060793112164_6222249673722444893_n-removebg-preview.png">
-            <div>
-                <p>Report no: {{ stone_detail.verification_number }}</p>
-                <p>Date:</p>
-                <p>Item Described:</p>
-                <p>Shape/Cut:</p>
-                <p>Weight:</p>
-                <p>Dimensions:</p>
-                <p>Colour:</p>
-                <p>Identified as:</p>
+            <h3>{{ stone_detail.item_type }} Identification Report</h3>
+            <div class="report-details">
+                <img src="../static/img/228347852_4170060793112164_6222249673722444893_n-removebg-preview.png">
+                <div class="mid-section">
+                    <div class="report-headings">
+                        <p>Report no: </p>
+                        {% if stone_detail.item_type == 'Gemstone' %}
+                        <p>Weight: </p>
+                        <p>Shape/Cut: </p>
+                        <p>Color: </p>
+                        <p>Dimensions: </p>
+                        <p>Tranparency: </p>
+                        <p>Specific Gravity: </p>
+                        <p>Refractive Index: </p>
+                        <p>Identified As:</p>
+                        {% elif stone_detail.item_type == 'Jewelry' %}
+                        <p>Weight: </p>
+                        <p>Metal Type:</p>
+                        <p>Shape: </p>
+                        <p>Pieces: </p>
+                        <p>Color:</p>
+                        <p>Clarity:</p>
+                        {% else %}
+                        <p>Color: </p>
+                        <p>Dimensions: </p>
+                        <p>Weight: </p>
+                        <p>Natural Faces: </p>
+                        <p>Artificial Faces: </p>
+                        <p>Indications of Tampering: </p>
+                        {% endif %}
+                    </div>
+                    <div class="report-value">
+                        <p>{{ stone_detail.verification_number }}</p>
+                        {% if stone_detail.item_type == 'Gemstone' %}
+                        <p>{{ stone_detail.weight }}</p>
+                        <p>{{ stone_detail.shape }}</p>
+                        <p>{{ stone_detail.color }}</p>
+                        <p>{{ stone_detail.dimension }}</p>
+                        <p>{{ stone_detail.transparency }}</p>
+                        <p>{{ stone_detail.specific_gravity }}</p>
+                        <p>{{ stone_detail.refractive_index }}</p>
+                        <p>{{ stone_detail.identified_as }}</p>
+                        {% elif stone_detail.item_type == 'Jewelry' %}
+                        <p>{{ stone_detail.weight }}</p>
+                        <p>{{ stone_detail.metal_type }}</p>
+                        <p>{{ stone_detail.shape }}</p>
+                        <p>{{ stone_detail.pieces }}</p>
+                        <p>{{ stone_detail.color }}</p>
+                        <p>{{ stone_detail.clarity }}</p>
+                        {% else %}
+                        <p>{{ stone_detail.color }}</p>
+                        <p>{{ stone_detail.dimension }}</p>
+                        <p>{{ stone_detail.weight }}</p>
+                        <p>{{ stone_detail.natural_faces }}</p>
+                        <p>{{ stone_detail.artificial_faces }}</p>
+                        <p>{{ stone_detail.indications_of_tampering }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="left-section">
+                    <p>Date: {{ stone_detail.date }}</p>
+                </div>
             </div>
         </div>
         {% endfor %}
         {% else %}
         <h2 class="heading-2">Sorry record could not be found.</h2>
         {% endif %}
-        </div>
-    </section>
+    </div>
+</section>
 {% endblock %}
