@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <section class="s_verification_section">
     <div class="container">
@@ -7,7 +8,7 @@
         <div class="report-section">
             <h3>{{ stone_detail.item_type }} Identification Report</h3>
             <div class="report-details">
-                <img src="../static/img/228347852_4170060793112164_6222249673722444893_n-removebg-preview.png">
+                <img src="{% static 'img/228347852_4170060793112164_6222249673722444893_n-removebg-preview.png' %}">
                 <div class="mid-section">
                     <div class="report-headings">
                         <p>Report no: </p>
