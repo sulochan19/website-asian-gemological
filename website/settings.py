@@ -126,9 +126,9 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/') 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 STATICFILES_FINDERS =( 'django.contrib.staticfiles.finders.FileSystemFinder',  'django.contrib.staticfiles.finders.AppDirectoriesFinder',    'compressor.finders.CompressorFinder',
 ) 
 COMPRESS_PRECOMPILERS = (    
     ('text/x-scss', 'django_libsass.SassCompiler'),
 )
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
