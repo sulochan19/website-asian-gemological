@@ -232,30 +232,40 @@
             margin: 0;
             gap: 30px;
         }
-    }
 
-    .contact-section-text {
-        display: flex;
-        flex-direction: column;
-        gap: 23px;
-
-        &__detail {
+        .contact-section-text {
             display: flex;
-            flex-direction: row;
-            gap: 12px;
+            flex-direction: column;
+            gap: 23px;
+
+            &__detail {
+                display: flex;
+                flex-direction: row;
+                gap: 12px;
+            }
+
+            .contact-section-heading {
+                font-weight: 700;
+                font-size: 50px;
+                line-height: 61px;
+                letter-spacing: 0.01em;
+                text-transform: capitalize;
+                text-align: left;
+                margin-bottom: 52px;
+                color: #251B21;
+            }
+        }
+
+        .contact-section-map {
+            iframe {
+                @include for-phone-only {
+                    width: auto;
+                }
+
+            }
         }
     }
 
-    .contact-section-heading {
-        font-weight: 700;
-        font-size: 50px;
-        line-height: 61px;
-        letter-spacing: 0.01em;
-        text-transform: capitalize;
-        text-align: left;
-        margin-bottom: 52px;
-        color: #251B21;
-    }
 }
 
 /* css for contact section ends*/
