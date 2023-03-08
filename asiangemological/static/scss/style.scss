@@ -16,6 +16,16 @@ html {
         color: #251B21;
     }
 }
+.search-btn{
+    background: #efb143;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+
+    &:focus{
+        box-shadow: none;
+    }
+}
 
 //scss for hero section starts
 .s_hero_section {
@@ -72,6 +82,7 @@ html {
 
                 &:hover {
                     text-decoration: none;
+                    background: #efb143;
                 }
             }
         }
@@ -152,7 +163,6 @@ html {
                 font-size: 14px;
                 line-height: 160%;
                 color: #797E94;
-                margin-bottom: 43px;
             }
 
             &__link {
@@ -238,7 +248,6 @@ html {
     .contact-section {
         display: flex;
         flex-direction: row;
-        gap: 150px;
         margin: 0 150px;
 
         @include for-phone-only {
