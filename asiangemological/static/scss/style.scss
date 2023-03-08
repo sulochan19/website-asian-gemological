@@ -1,5 +1,9 @@
 @import 'mixin.scss';
 
+html {
+    scroll-behavior: smooth;
+}
+
 .primary-btn {
     background: white;
     border-radius: 8px;
@@ -16,7 +20,7 @@
 //scss for hero section starts
 .s_hero_section {
     padding: 80px 0 100px 0;
-    background: url("/static/img/submit-your-gem-bg.png");
+    background: url("/static/img/image.png");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -43,33 +47,43 @@
                 font-style: normal;
                 font-weight: 900;
                 font-size: 80px;
-                line-height: 80px;
+                line-height: 85px;
                 letter-spacing: 0.01em;
                 color: white;
 
                 @include for-phone-only {
                     font-size: 3rem;
+                    line-height: 60px;
+                }
+            }
+
+            .hero-text__description {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 160%;
+                color: white;
+                margin: 24px 0 64px 0;
+            }
+
+            .hero-text__link {
+                padding: 16px 64px;
+                color: #251B21;
+
+                &:hover {
+                    text-decoration: none;
                 }
             }
         }
 
-        .hero-text__description {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 160%;
-            color: white;
-            margin: 24px 0 64px 0;
-        }
-
-        .hero-text__link {
-            padding: 16px 64px;
-            color: #251B21;
-
-            &:hover {
-                text-decoration: none;
+        img {
+            height: fit-content;
+            align-self: flex-end;
+            @include for-phone-only {
+                display: none;
             }
         }
+
     }
 }
 
@@ -340,6 +354,7 @@ footer {
 /* css for verification page */
 .s_verification_section {
     padding-top: 100px;
+    
 
     h2 {
         font-weight: 700;
@@ -362,6 +377,7 @@ footer {
 
         @include for-phone-only {
             flex-direction: column;
+            border-radius: 8px;
         }
 
         h3 {
@@ -373,6 +389,11 @@ footer {
             text-transform: capitalize;
             margin-bottom: 30px;
             color: white;
+
+            @include for-phone-only {
+                line-height: 40px;
+                margin-bottom: 0;
+            }
         }
 
         .report-details {
@@ -381,9 +402,17 @@ footer {
             gap: 30px;
             justify-content: space-evenly;
 
+            @include for-phone-only {
+                flex-direction: column;
+                gap: 0;
+            }
 
             img {
                 height: 300px;
+
+                @include for-phone-only {
+                    height: auto;
+                }
             }
 
             .mid-section {
