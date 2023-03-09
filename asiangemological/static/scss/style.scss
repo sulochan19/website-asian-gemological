@@ -16,13 +16,14 @@ html {
         color: #251B21;
     }
 }
-.search-btn{
+
+.search-btn {
     background: #efb143;
     color: white;
     padding: 10px 30px;
     border-radius: 10px;
 
-    &:focus{
+    &:focus {
         box-shadow: none;
     }
 }
@@ -34,8 +35,14 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
 
-    @include for-phone-only {
-        padding: 3.2rem 2.4rem;
+    @include respond(phone) {
+        padding: 5.2rem 1rem;
+        background-position: top;
+    }
+
+    @include respond(tab-port) {
+        padding: 5.2rem 1rem;
+        background-position: top;
     }
 
     .hero-section {
@@ -43,7 +50,12 @@ html {
         flex-direction: row;
         gap: 200px;
 
-        @include for-phone-only {
+        @include respond(phone) {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        @include respond(tab-port) {
             flex-direction: column;
             gap: 0;
         }
@@ -61,7 +73,7 @@ html {
                 letter-spacing: 0.01em;
                 color: white;
 
-                @include for-phone-only {
+                @include respond(phone) {
                     font-size: 3rem;
                     line-height: 60px;
                 }
@@ -88,9 +100,18 @@ html {
         }
 
         img {
-            height: fit-content;
+            width: 100%;
+            height: auto;
             align-self: flex-end;
-            @include for-phone-only {
+
+            @include respond(phone) {
+                display: none;
+            }
+
+            @include respond(tab-port) {
+                display: none;
+            }
+            @include respond(tab-land) {
                 display: none;
             }
         }
@@ -109,8 +130,12 @@ html {
     background: white;
     padding: 100px 0 30px 0;
 
-    @include for-phone-only {
-        padding: 3.2rem 2.4rem;
+    @include respond(phone) {
+        padding: 3.2rem 1rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 3.2rem 1rem;
     }
 
     .services-section-heading {
@@ -130,14 +155,9 @@ html {
         gap: 32px;
         margin: 0 150px;
 
-        @include for-phone-only {
-            flex-direction: column;
-            gap: 32px;
-            margin: 0;
-        }
-
         .service-card {
-            flex-basis: 100%;
+            flex: 1;
+            min-width: 0;
             background: #FFFFFF;
             padding: 32px;
             box-shadow: 0px 8px 16px rgba(98, 120, 227, 0.1);
@@ -174,6 +194,18 @@ html {
 
         }
 
+        @include respond(tab-port) {
+            flex-direction: column;
+            gap: 32px;
+            margin: 0;
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+            gap: 32px;
+            margin: 0;
+        }
+
     }
 }
 
@@ -184,17 +216,31 @@ html {
     background: white;
     padding: 100px 0 30px 0;
 
-    @include for-phone-only {
-        padding: 3.2rem 2.4rem;
+    @include respond(phone) {
+        padding: 3.2rem 1rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 3.2rem 1rem;
     }
 
     .image-text {
         display: flex;
         flex-direction: row;
 
-        @include for-phone-only {
+        @include respond(phone) {
             flex-direction: column;
             gap: 0;
+        }
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
         }
     }
 
@@ -203,7 +249,11 @@ html {
         display: flex;
         flex-direction: column;
 
-        @include for-phone-only {
+        @include respond(phone) {
+            margin: 0;
+        }
+
+        @include respond(tab-port) {
             margin: 0;
         }
 
@@ -241,8 +291,12 @@ html {
     background: white;
     padding: 100px 0 50px 0;
 
-    @include for-phone-only {
-        padding: 3.2rem 2.4rem;
+    @include respond(phone) {
+        padding: 3.2rem 1rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 3.2rem 1rem;
     }
 
     .contact-section {
@@ -250,7 +304,13 @@ html {
         flex-direction: row;
         margin: 0 150px;
 
-        @include for-phone-only {
+        @include respond(phone) {
+            flex-direction: column;
+            margin: 0;
+            gap: 30px;
+        }
+
+        @include respond(tab-port) {
             flex-direction: column;
             margin: 0;
             gap: 30px;
@@ -281,10 +341,7 @@ html {
 
         .contact-section-map {
             iframe {
-                @include for-phone-only {
-                    width: auto;
-                }
-
+                width: -webkit-fill-available;
             }
         }
     }
@@ -298,8 +355,12 @@ footer {
     padding: 50px 0;
     background: #251B21;
 
-    @include for-phone-only {
-        padding: 3.2rem 2.4rem;
+    @include respond(phone) {
+        padding: 3.2rem 1rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 3.2rem 1rem;
     }
 
     .footer-section {
@@ -311,7 +372,11 @@ footer {
         padding-bottom: 61px;
         border-bottom: 1px solid #CED1E433;
 
-        @include for-phone-only {
+        @include respond(phone) {
+            flex-direction: column;
+        }
+
+        @include respond(tab-port) {
             flex-direction: column;
         }
     }
@@ -363,7 +428,7 @@ footer {
 /* css for verification page */
 .s_verification_section {
     padding-top: 100px;
-    
+
 
     h2 {
         font-weight: 700;
@@ -384,7 +449,12 @@ footer {
         padding: 50px;
         border-radius: 60px;
 
-        @include for-phone-only {
+        @include respond(phone) {
+            flex-direction: column;
+            border-radius: 8px;
+        }
+
+        @include respond(tab-port) {
             flex-direction: column;
             border-radius: 8px;
         }
@@ -399,7 +469,7 @@ footer {
             margin-bottom: 30px;
             color: white;
 
-            @include for-phone-only {
+            @include respond(phone) {
                 line-height: 40px;
                 margin-bottom: 0;
             }
@@ -411,15 +481,22 @@ footer {
             gap: 30px;
             justify-content: space-evenly;
 
-            @include for-phone-only {
+            @include respond(phone) {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            @include respond(tab-port) {
                 flex-direction: column;
                 gap: 0;
             }
 
             img {
-                height: 300px;
+                width: 100%;
+                height: auto;
+                max-width: 400px;
 
-                @include for-phone-only {
+                @include respond(phone) {
                     height: auto;
                 }
             }
