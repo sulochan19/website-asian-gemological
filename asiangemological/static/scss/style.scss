@@ -5,22 +5,17 @@ html {
 }
 
 .primary-btn {
-    background: white;
+    background: #efb143;
     border-radius: 8px;
     width: fit-content;
-    padding: 15px 34px;
-    color: #251B21;
-
-    &:hover {
-        background: white;
-        color: #251B21;
-    }
+    padding: 15px 35px;
+    color: white;
 }
 
 .search-btn {
     background: #efb143;
     color: white;
-    padding: 10px 30px;
+    padding: 10px 35px;
     border-radius: 10px;
 
     &:focus {
@@ -90,11 +85,11 @@ html {
 
             .hero-text__link {
                 padding: 16px 64px;
-                color: #251B21;
 
                 &:hover {
                     text-decoration: none;
-                    background: #efb143;
+                    background: darken($color: #efb143, $amount: 5%);
+                    color: white;
                 }
             }
         }
